@@ -23,7 +23,8 @@ app.set("view engine", "handlebars");
 
 // Routes
 // =============================================================
-require("./controllers/burgerController")(app);
+var routes = require("./controllers/burgerController.js");
+app.use(routes)
 
 app.listen(PORT, function() {
     // Log (server-side) when our server has started
